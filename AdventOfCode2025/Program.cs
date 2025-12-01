@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using AdventOfCode2025;
 
 Console.WriteLine();
 
 var day = DateTime.Now.Day;
-day = 1;
 var testResults = new Dictionary<int, Tuple<int, long>>()
 {
-    { 1, new Tuple<int, long>(11, 31) },
+    { 1, new Tuple<int, long>(3, 6) },
 };
 
 var sw = new Stopwatch();
