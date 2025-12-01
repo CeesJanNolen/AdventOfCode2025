@@ -33,9 +33,8 @@ public class Day1 : IDay
             var direction = line[0];
             var distance = int.Parse(line[1..]);
 
-            for (int i = 0; i < distance; i++)
+            for (var i = 0; i < distance; i++)
             {
-                
                 start = direction switch
                 {
                     'R' => (start + 1 - 100) % 100,
@@ -43,13 +42,10 @@ public class Day1 : IDay
                     _ => start
                 };
 
-
                 if (start == 0) occurrences++;
             }
         }
 
         return occurrences.ToString();
-        
-        return 0.ToString();
     }
 }

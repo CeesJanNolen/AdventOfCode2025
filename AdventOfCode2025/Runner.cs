@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Diagnostics;
+using System.Reflection;
 using AdventOfCode2025.Solutions;
 
 namespace AdventOfCode2025;
@@ -20,7 +21,12 @@ public static class Runner
         var sampleResult = dayRunner.PartA(sampleData);
         if (sampleResult.Equals(testResult.ToString()))
         {
-            return dayRunner.PartA(data);
+            var sw = new Stopwatch();
+            sw.Start();
+            var result = dayRunner.PartA(data);
+            sw.Stop();
+            Console.WriteLine($"Day {day} took {sw.ElapsedMilliseconds}ms");
+            return result;
         }
 
         Console.WriteLine("Test A failed!");
@@ -45,7 +51,12 @@ public static class Runner
         var sampleResult = dayRunner.PartB(sampleData);
         if (sampleResult.Equals(testResult.ToString()))
         {
-            return dayRunner.PartB(data);
+            var sw = new Stopwatch();
+            sw.Start();
+            var result = dayRunner.PartB(data);
+            sw.Stop();
+            Console.WriteLine($"Day {day} took {sw.ElapsedMilliseconds}ms");
+            return result;
         }
 
         Console.WriteLine("Test B failed!");
