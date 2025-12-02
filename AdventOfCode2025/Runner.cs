@@ -6,7 +6,7 @@ namespace AdventOfCode2025;
 
 public static class Runner
 {
-    public static string? RunA(int day, int testResult)
+    public static string? RunA(int day, long testResult)
     {
         var data = Input.GetInput(day);
         var sampleData = Input.GetSampleAInput(day);

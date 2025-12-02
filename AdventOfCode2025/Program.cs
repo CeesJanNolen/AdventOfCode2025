@@ -4,9 +4,10 @@ using AdventOfCode2025;
 Console.WriteLine();
 
 var day = DateTime.Now.Day;
-var testResults = new Dictionary<int, Tuple<int, long>>()
+var testResults = new Dictionary<int, Tuple<long, long>>()
 {
-    { 1, new Tuple<int, long>(3, 6) },
+    { 1, new Tuple<long, long>(3, 6) },
+    { 2, new Tuple<long, long>(1227775554, 4174379265) },
 };
 
 var sw = new Stopwatch();
