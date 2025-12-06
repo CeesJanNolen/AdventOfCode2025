@@ -15,7 +15,7 @@ public static class Runner
 
         var className = $"AdventOfCode2025.Solutions.Day{day}";
         var classType = assembly.GetType(className);
-        
+
         if (classType == null) return null;
         if (Activator.CreateInstance(classType) is not IDay dayRunner) return null;
         var sampleResult = dayRunner.PartA(sampleData);
@@ -25,7 +25,7 @@ public static class Runner
             sw.Start();
             var result = dayRunner.PartA(data);
             sw.Stop();
-            Console.WriteLine($"Day {day} took {sw.ElapsedMilliseconds}ms");
+            Console.WriteLine($"Day {day} Part A took {sw.ElapsedMilliseconds}ms -  {sw.ElapsedTicks} ticks");
             return result;
         }
 
@@ -45,7 +45,7 @@ public static class Runner
 
         var className = $"AdventOfCode2025.Solutions.Day{day}";
         var classType = assembly.GetType(className);
-        
+
         if (classType == null) return null;
         if (Activator.CreateInstance(classType) is not IDay dayRunner) return null;
         var sampleResult = dayRunner.PartB(sampleData);
@@ -55,7 +55,7 @@ public static class Runner
             sw.Start();
             var result = dayRunner.PartB(data);
             sw.Stop();
-            Console.WriteLine($"Day {day} took {sw.ElapsedMilliseconds}ms");
+            Console.WriteLine($"Day {day} Part B took {sw.ElapsedMilliseconds}ms - {sw.ElapsedTicks} ticks");
             return result;
         }
 
